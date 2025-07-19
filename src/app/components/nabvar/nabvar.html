@@ -1,0 +1,67 @@
+<!-- Navbar Retro para Piedra, Papel o Tijera -->
+<nav class="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 shadow-2xl border-b-4 border-cyan-400 relative overflow-hidden">
+  <!-- Efecto de scanlines retro -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/5 to-transparent pointer-events-none"></div>
+  
+  <!-- Contenedor principal -->
+  <div class="container mx-auto px-6 py-4 relative z-10">
+    <div class="flex items-center justify-between">
+      
+      <!-- Logo/Título -->
+      <div class="flex items-center space-x-3">
+        <div class="bg-gradient-to-r from-cyan-400 to-purple-400 p-3 rounded-lg shadow-lg border-2 border-cyan-300 transform hover:scale-105 transition-transform duration-300">
+          <span class="text-2xl">🎮</span>
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-mono tracking-wider">
+            NanoDock
+          </h1>
+          <p class="text-cyan-300 text-sm font-mono opacity-80">Piedra • Papel • Tijera</p>
+        </div>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div class="flex items-center space-x-8">
+        <!-- Botón Home -->
+        <a 
+          routerLink="/" 
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{exact: true}"
+          class="nav-button group relative px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-mono font-bold rounded-lg border-2 border-cyan-400 shadow-lg hover:shadow-cyan-400/50 transform hover:scale-105 transition-all duration-300 hover:from-cyan-500 hover:to-blue-500">
+          
+          <!-- Efecto de brillo -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+          
+          <span class="relative z-10 flex items-center space-x-2">
+            <span>🏠</span>
+            <span>INICIO</span>
+          </span>
+        </a>
+
+        <!-- Botón Juego -->
+        <a 
+          routerLink="/juego" 
+          routerLinkActive="active-link"
+          class="nav-button group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-mono font-bold rounded-lg border-2 border-purple-400 shadow-lg hover:shadow-purple-400/50 transform hover:scale-105 transition-all duration-300 hover:from-purple-500 hover:to-pink-500">
+          
+          <!-- Efecto de brillo -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+          
+          <span class="relative z-10 flex items-center space-x-2">
+            <span>⚔️</span>
+            <span>JUGAR</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Indicador decorativo -->
+      <div class="hidden md:flex items-center space-x-2">
+        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
+        <span class="text-green-400 font-mono text-sm">ONLINE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Borde inferior animado -->
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse"></div>
+</nav>

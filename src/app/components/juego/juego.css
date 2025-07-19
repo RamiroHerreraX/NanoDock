@@ -1,0 +1,85 @@
+/* Estilos adicionales para el juego de Piedra, Papel o Tijera */
+
+/* Animación para los botones de selección */
+.opcion-boton {
+  transition: all 0.3s ease;
+}
+
+.opcion-boton:hover {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
+}
+
+.opcion-boton:active {
+  transform: scale(0.95);
+}
+
+/* Animación para la aparición del resultado */
+@keyframes aparecer-resultado {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.resultado-animacion {
+  animation: aparecer-resultado 0.5s ease-out;
+}
+
+/* Efecto de pulso para el separador VS */
+@keyframes pulso-vs {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.vs-separador {
+  animation: pulso-vs 2s ease-in-out infinite;
+}
+
+/* Efectos de brillo para las estadísticas */
+.estadistica-carta {
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 200%;
+  animation: brillo-estadistica 3s linear infinite;
+}
+
+@keyframes brillo-estadistica {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+  .opcion-boton {
+    padding: 1.5rem;
+  }
+  
+  .opcion-boton .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .opcion-boton .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .opcion-boton .text-xl {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
